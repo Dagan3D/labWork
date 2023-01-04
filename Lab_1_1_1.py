@@ -1,4 +1,5 @@
 import re
-s = input("Введите строку: /n")
-x = input("Введите вирус:/n")
-re.sub(x, "", s, flags=re.I)
+
+s = input("Введите строку: ")
+x = input("Введите вирус: ")
+print(re.sub(x, "", s, flags=re.IGNORECASE))
