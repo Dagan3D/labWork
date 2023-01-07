@@ -25,5 +25,5 @@ def string_formating(numberOfIP: int) -> str:
         res += listToIP(ip)
     return res
 
-with open(".\ip.log", "w") as ip_file:
+with open("ip.log", "w") as ip_file:
     ip_file.write(string_formating(10000))
