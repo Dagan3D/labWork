@@ -6,9 +6,13 @@ def numberIsCorrect (inNum: str) -> int:
 
 def one_step (inputList: list) -> list:
     res = inputList
+    notNull = False
     for i, n in enumerate(res):
         if n != 0:
             res[i] -= 1
+            notNull = True
+        elif not notNull:
+            pass
         else:
             return res
     return res
@@ -22,13 +26,10 @@ while True:
     except ValueError:
         print("Ошибка ввода. Попробуйте снова")
 
-inputList = one_step(inputList)
-print(inputList)
-inputList = one_step(inputList)
-print(inputList)
-inputList = one_step(inputList)
-print(inputList)
-inputList = one_step(inputList)
-print(inputList)
-inputList = one_step(inputList)
-print(inputList)
+#print(inputList)
+num = 0
+while not all([i == 0 for i in inputList]):
+    inputList = one_step(inputList)
+    num += 1
+    #print(inputList)
+print(num)
