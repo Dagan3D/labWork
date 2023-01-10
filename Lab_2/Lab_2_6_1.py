@@ -11,4 +11,5 @@ for chr in str:
     if chr.lower() in alphavit.keys():
         alphavit[chr.lower()] += 1
 
-print(alphavit)
+for i in alphavit:
+    print(i + ":", alphavit[i])
