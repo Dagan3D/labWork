@@ -2,6 +2,8 @@ import math
 
 
 def reducer(frac: tuple[int, int]) -> tuple[int, int]:
+    if frac[0] >= frac[1]:
+        raise ValueError
     NOD = math.gcd(frac[0], frac[1])
     return int(frac[0] / NOD), int(frac[1] / NOD)
 
