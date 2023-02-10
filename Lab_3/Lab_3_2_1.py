@@ -2,7 +2,12 @@ import math
 
 
 def hofstadter_f_m(n: int) -> list[int]:
-    print(1)
+
+    if type(n) != int:
+        raise ValueError
+    if n <= 0:
+        raise ValueError
+
     num = 1
     F_res = [1]
     M_res = [0]
@@ -20,15 +25,12 @@ def main():
         try:
             n: int = 0
             n = int(input("Введите колличество пар значений: "))
-            if not (n > 0):
-                raise ValueError
+            a = hofstadter_f_m(n)
+            for i in a:
+                print(i)
             break
         except ValueError:
             print("Ошибка ввода. Попробуйте снова")
-
-    a = hofstadter_f_m(n)
-    for i in a:
-        print(i)
 
 
 if __name__ == "__main__":
